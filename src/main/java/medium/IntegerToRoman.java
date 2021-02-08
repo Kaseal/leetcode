@@ -1,9 +1,7 @@
+package medium;
+
 //12. Integer to Roman (Medium)
 public class IntegerToRoman {
-
-	public static void main(String[] args) {
-		System.out.println(new IntegerToRoman().intToRoman(3453));
-	}
 
 	public String intToRoman(int num) {
 		if (num < 1 || num > 3999) {

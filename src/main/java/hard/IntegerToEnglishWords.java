@@ -1,10 +1,9 @@
+package hard;
+
 import java.util.HashMap;
 
 //#273. Integer to English Words (Hard)
 public class IntegerToEnglishWords {
-	public static void main(String[] args) {
-		System.out.println(new IntegerToEnglishWords().numberToWords(1_000_000_000));
-	}
 
 	public String numberToWords(int num) {
 		String result = "";
