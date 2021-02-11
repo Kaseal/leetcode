@@ -27,11 +27,7 @@ public class ListNode {
 			}
 		}
 
-		if (listNode1 != null || listNode2 != null) {
-			return false;
-		}
-
-		return true;
+		return listNode1 == null && listNode2 == null;
 	}
 
 }
