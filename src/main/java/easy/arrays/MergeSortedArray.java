@@ -1,4 +1,4 @@
-package easy;
+package easy.arrays;
 
 //88. Merge Sorted Array (Easy)
 public class MergeSortedArray {

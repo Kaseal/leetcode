@@ -1,4 +1,4 @@
-package easy;
+package easy.arrays;
 
 import org.junit.Assert;
 import org.junit.Test;

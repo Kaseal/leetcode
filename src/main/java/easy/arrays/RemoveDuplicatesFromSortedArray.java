@@ -1,4 +1,4 @@
-package easy;
+package easy.arrays;
 
 //26. Remove Duplicates from Sorted Array (Easy)
 public class RemoveDuplicatesFromSortedArray {

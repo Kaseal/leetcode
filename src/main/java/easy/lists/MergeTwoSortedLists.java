@@ -1,4 +1,4 @@
-package easy;
+package easy.lists;
 
 import easy.helper_classes.ListNode;
 

@@ -1,4 +1,4 @@
-package easy;
+package easy.arrays;
 
 //27. Remove Element (Easy)
 public class RemoveElement {

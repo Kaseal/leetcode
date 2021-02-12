@@ -1,4 +1,4 @@
-package easy;
+package easy.trees;
 
 import easy.helper_classes.TreeNode;
 
