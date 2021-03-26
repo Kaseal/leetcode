@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class ValidPalindromeTest {
 
-	private ValidPalindrome validPalindrome = new ValidPalindrome();
+	private final ValidPalindrome validPalindrome = new ValidPalindrome();
 
 	@Test
 	void test_A_man_a_plan_a_canal_Panama() {
