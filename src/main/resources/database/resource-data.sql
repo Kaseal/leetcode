@@ -69,3 +69,47 @@ insert into Users (user_id, name, mail) values ('4', 'Sally', 'sally.come@leetco
 insert into Users (user_id, name, mail) values ('5', 'Marwan', 'quarz#2020@leetcode.com');
 insert into Users (user_id, name, mail) values ('6', 'David', 'david69@gmail.com');
 insert into Users (user_id, name, mail) values ('7', 'Shapiro', '.shapo@leetcode.com');
+
+# 183. Customers Who Never Order (Easy)
+Create table If Not Exists Customers (Id int, Name varchar(255));
+Create table If Not Exists Orders (Id int, CustomerId int);
+Truncate table Customers;
+insert into Customers (Id, Name) values ('1', 'Joe');
+insert into Customers (Id, Name) values ('2', 'Henry');
+insert into Customers (Id, Name) values ('3', 'Sam');
+insert into Customers (Id, Name) values ('4', 'Max');
+Truncate table Orders;
+insert into Orders (Id, CustomerId) values ('1', '3');
+insert into Orders (Id, CustomerId) values ('2', '1');
+
+# 182. Duplicate Emails (Easy)
+Create table If Not Exists Person (Id int, Email varchar(255));
+Truncate table Person;
+insert into Person (Id, Email) values ('1', 'a@b.com');
+insert into Person (Id, Email) values ('2', 'c@d.com');
+insert into Person (Id, Email) values ('3', 'a@b.com');
+
+# 1757. Recyclable and Low Fat Products (Easy)
+Create table If Not Exists Products (product_id int, low_fats ENUM('Y', 'N'), recyclable ENUM('Y','N'));
+Truncate table Products;
+insert into Products (product_id, low_fats, recyclable) values ('0', 'Y', 'N');
+insert into Products (product_id, low_fats, recyclable) values ('1', 'Y', 'Y');
+insert into Products (product_id, low_fats, recyclable) values ('2', 'N', 'Y');
+insert into Products (product_id, low_fats, recyclable) values ('3', 'Y', 'Y');
+insert into Products (product_id, low_fats, recyclable) values ('4', 'N', 'N');
+
+# 597. Friend Requests I: Overall Acceptance Rate (Easy)
+Create table If Not Exists FriendRequest (sender_id int, send_to_id int, request_date date);
+Create table If Not Exists RequestAccepted (requester_id int, accepter_id int, accept_date date);
+Truncate table FriendRequest;
+insert into FriendRequest (sender_id, send_to_id, request_date) values ('1', '2', '2016/06/01');
+insert into FriendRequest (sender_id, send_to_id, request_date) values ('1', '3', '2016/06/01');
+insert into FriendRequest (sender_id, send_to_id, request_date) values ('1', '4', '2016/06/01');
+insert into FriendRequest (sender_id, send_to_id, request_date) values ('2', '3', '2016/06/02');
+insert into FriendRequest (sender_id, send_to_id, request_date) values ('3', '4', '2016/06/09');
+Truncate table RequestAccepted;
+insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('1', '2', '2016/06/03');
+insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('1', '3', '2016/06/08');
+insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('2', '3', '2016/06/08');
+insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('3', '4', '2016/06/09');
+insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('3', '4', '2016/06/10');

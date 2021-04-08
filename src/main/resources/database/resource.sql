@@ -113,3 +113,35 @@ WHERE w1.Temperature > w2.Temperature;
 SELECT *
 FROM Users
 WHERE mail REGEXP '^[a-zA-Z]+[a-zA-Z0-9.\\-_]*@leetcode.com'
+
+# 183. Customers Who Never Order (Easy)
+SELECT c.Name AS Customers
+FROM Customers AS c
+WHERE c.id NOT IN (SELECT CustomerId FROM Orders);
+
+SELECT c.Name AS Customers
+FROM Customers AS c
+	     LEFT JOIN Orders o ON c.Id = o.CustomerId
+WHERE o.id IS NULL;
+
+# 182. Duplicate Emails (Easy)
+SELECT DISTINCT p1.Email
+FROM Person p1,
+     Person p2
+WHERE p1.Email = p2.Email
+  AND p1.id > p2.Id;
+
+SELECT Email
+FROM Person
+GROUP BY Email
+HAVING COUNT(Email) > 1;
+
+# 1757. Recyclable and Low Fat Products (Easy)
+SELECT product_id
+FROM Products
+WHERE low_fats = 'Y'
+  AND recyclable = 'Y';
+
+# 597. Friend Requests I: Overall Acceptance Rate (Easy)
+SELECT IFNULL(ROUND((SELECT COUNT(DISTINCT ra.requester_id, ra.accepter_id) FROM RequestAccepted ra) /
+                    (SELECT COUNT(DISTINCT fr.sender_id, fr.send_to_id) FROM FriendRequest fr), 2), 0) AS accept_rate;
