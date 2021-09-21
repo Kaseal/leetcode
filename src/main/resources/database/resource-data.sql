@@ -113,3 +113,76 @@ insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('1'
 insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('2', '3', '2016/06/08');
 insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('3', '4', '2016/06/09');
 insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('3', '4', '2016/06/10');
+
+# 577. Employee Bonus
+Create table If Not Exists Employee (EmpId int, Name varchar(255), Supervisor int, Salary int);
+Create table If Not Exists Bonus (EmpId int, Bonus int);
+Truncate table Employee;
+insert into Employee (EmpId, Name, Supervisor, Salary) values ('3', 'Brad', null, '4000');
+insert into Employee (EmpId, Name, Supervisor, Salary) values ('1', 'John', '3', '1000');
+insert into Employee (EmpId, Name, Supervisor, Salary) values ('2', 'Dan', '3', '2000');
+insert into Employee (EmpId, Name, Supervisor, Salary) values ('4', 'Thomas', '3', '4000');
+Truncate table Bonus;
+insert into Bonus (EmpId, Bonus) values ('2', '500');
+insert into Bonus (EmpId, Bonus) values ('4', '2000');
+
+# 1141. User Activity for the Past 30 Days I
+Create table If Not Exists Activity (user_id int, session_id int, activity_date date, activity_type ENUM('open_session', 'end_session', 'scroll_down', 'send_message'));
+Truncate table Activity;
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('1', '1', '2019-07-20', 'open_session');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('1', '1', '2019-07-20', 'scroll_down');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('1', '1', '2019-07-20', 'end_session');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('2', '4', '2019-07-20', 'open_session');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('2', '4', '2019-07-21', 'send_message');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('2', '4', '2019-07-21', 'end_session');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('3', '2', '2019-07-21', 'open_session');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('3', '2', '2019-07-21', 'send_message');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('3', '2', '2019-07-21', 'end_session');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('4', '3', '2019-06-25', 'open_session');
+insert into Activity (user_id, session_id, activity_date, activity_type) values ('4', '3', '2019-06-25', 'end_session');
+
+# 584. Find Customer Referee
+CREATE TABLE IF NOT EXISTS customer (id INT,name VARCHAR(25),referee_id INT);
+Truncate table customer;
+insert into customer (id, name, referee_id) values ('1', 'Will', NULL);
+insert into customer (id, name, referee_id) values ('2', 'Jane', NULL);
+insert into customer (id, name, referee_id) values ('3', 'Alex', '2');
+insert into customer (id, name, referee_id) values ('4', 'Bill', NULL);
+insert into customer (id, name, referee_id) values ('5', 'Zack', '1');
+insert into customer (id, name, referee_id) values ('6', 'Mark', '2');
+
+# 1729. Find Followers Count
+Create table If Not Exists Followers(user_id int, follower_id int);
+Truncate table Followers;
+insert into Followers (user_id, follower_id) values ('0', '1');
+insert into Followers (user_id, follower_id) values ('1', '0');
+insert into Followers (user_id, follower_id) values ('2', '0');
+insert into Followers (user_id, follower_id) values ('2', '1');
+
+# 1484. Group Sold Products By The Date
+Create table If Not Exists Activities (sell_date date, product varchar(20));
+Truncate table Activities;
+insert into Activities (sell_date, product) values ('2020-05-30', 'Headphone');
+insert into Activities (sell_date, product) values ('2020-06-01', 'Pencil');
+insert into Activities (sell_date, product) values ('2020-06-02', 'Mask');
+insert into Activities (sell_date, product) values ('2020-05-30', 'Basketball');
+insert into Activities (sell_date, product) values ('2020-06-01', 'Bible');
+insert into Activities (sell_date, product) values ('2020-06-02', 'Mask');
+insert into Activities (sell_date, product) values ('2020-05-30', 'T-Shirt');
+
+# 1113. Reported Posts
+Create table If Not Exists Actions (user_id int, post_id int, action_date date, action ENUM('view', 'like', 'reaction', 'comment', 'report', 'share'), extra varchar(10));
+Truncate table Actions;
+insert into Actions (user_id, post_id, action_date, action, extra) values ('1', '1', '2019-07-01', 'view', 'None');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('1', '1', '2019-07-01', 'like', 'None');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('1', '1', '2019-07-01', 'share', 'None');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('2', '4', '2019-07-04', 'view', 'None');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('2', '4', '2019-07-04', 'report', 'spam');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('3', '4', '2019-07-04', 'view', 'None');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('3', '4', '2019-07-04', 'report', 'spam');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('4', '3', '2019-07-02', 'view', 'None');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('4', '3', '2019-07-02', 'report', 'spam');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('5', '2', '2019-07-04', 'view', 'None');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('5', '2', '2019-07-04', 'report', 'racism');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('5', '5', '2019-07-04', 'view', 'None');
+insert into Actions (user_id, post_id, action_date, action, extra) values ('5', '5', '2019-07-04', 'report', 'racism');

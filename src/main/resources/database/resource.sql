@@ -145,3 +145,42 @@ WHERE low_fats = 'Y'
 # 597. Friend Requests I: Overall Acceptance Rate (Easy)
 SELECT IFNULL(ROUND((SELECT COUNT(DISTINCT ra.requester_id, ra.accepter_id) FROM RequestAccepted ra) /
                     (SELECT COUNT(DISTINCT fr.sender_id, fr.send_to_id) FROM FriendRequest fr), 2), 0) AS accept_rate;
+
+# 577. Employee Bonus
+SELECT e.Name name, b.Bonus bonus
+FROM Employee e
+	     LEFT JOIN Bonus b ON e.EmpId = b.EmpId
+WHERE b.Bonus IS NULL
+   OR b.Bonus < 1000;
+
+# 1141. User Activity for the Past 30 Days I
+SELECT activity_date day, COUNT(DISTINCT user_id) active_users
+FROM Activity a
+WHERE activity_date > DATE_SUB('2019-07-27', INTERVAL 30 DAY)
+GROUP BY day;
+
+# 584. Find Customer Referee
+SELECT name
+FROM customer
+WHERE referee_id IS NULL
+   OR referee_id <> 2;
+
+# 1729. Find Followers Count
+SELECT user_id, COUNT(user_id) followers_count
+FROM Followers
+GROUP BY user_id
+ORDER BY user_id;
+
+# 1484. Group Sold Products By The Date
+SELECT sell_date, COUNT(DISTINCT product) num_sold, GROUP_CONCAT(DISTINCT product SEPARATOR ',') products
+FROM Activities
+GROUP BY sell_date
+ORDER BY sell_date;
+
+# 1113. Reported Posts
+SELECT extra report_reason, COUNT(DISTINCT post_id) report_count
+FROM Actions
+WHERE action_date = DATE_SUB('2019-07-05', INTERVAL 1 DAY)
+  AND action = 'report'
+  AND extra IS NOT NULL
+GROUP BY extra
