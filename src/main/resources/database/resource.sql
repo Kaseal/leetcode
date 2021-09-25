@@ -112,7 +112,7 @@ WHERE w1.Temperature > w2.Temperature;
 # 1517. Find Users With Valid E-Mails (Easy)
 SELECT *
 FROM Users
-WHERE mail REGEXP '^[a-zA-Z]+[a-zA-Z0-9.\\-_]*@leetcode.com'
+WHERE mail REGEXP '^[a-zA-Z]+[a-zA-Z0-9.\\-_]*@leetcode.com';
 
 # 183. Customers Who Never Order (Easy)
 SELECT c.Name AS Customers
@@ -153,34 +153,63 @@ FROM Employee e
 WHERE b.Bonus IS NULL
    OR b.Bonus < 1000;
 
-# 1141. User Activity for the Past 30 Days I
+# 1141. User Activity for the Past 30 Days I (Easy)
 SELECT activity_date day, COUNT(DISTINCT user_id) active_users
 FROM Activity a
 WHERE activity_date > DATE_SUB('2019-07-27', INTERVAL 30 DAY)
 GROUP BY day;
 
-# 584. Find Customer Referee
+# 584. Find Customer Referee (Easy)
 SELECT name
 FROM customer
 WHERE referee_id IS NULL
    OR referee_id <> 2;
 
-# 1729. Find Followers Count
+# 1729. Find Followers Count (Easy)
 SELECT user_id, COUNT(user_id) followers_count
 FROM Followers
 GROUP BY user_id
 ORDER BY user_id;
 
-# 1484. Group Sold Products By The Date
+# 1484. Group Sold Products By The Date (Easy)
 SELECT sell_date, COUNT(DISTINCT product) num_sold, GROUP_CONCAT(DISTINCT product SEPARATOR ',') products
 FROM Activities
 GROUP BY sell_date
 ORDER BY sell_date;
 
-# 1113. Reported Posts
+# 1113. Reported Posts (Easy)
 SELECT extra report_reason, COUNT(DISTINCT post_id) report_count
 FROM Actions
 WHERE action_date = DATE_SUB('2019-07-05', INTERVAL 1 DAY)
   AND action = 'report'
   AND extra IS NOT NULL
-GROUP BY extra
+GROUP BY extra;
+
+# 574. Winning Candidate (Medium)
+SELECT c.Name
+FROM Candidate c
+	     LEFT JOIN vote v ON c.id = v.CandidateId
+GROUP BY v.CandidateId
+ORDER BY COUNT(v.CandidateId) DESC
+LIMIT 1;
+
+# 178. Rank Scores (Medium)
+SELECT Score, (SELECT COUNT(DISTINCT Score) FROM scores s2 WHERE s1.Score <= s2.Score) 'Rank'
+FROM Scores s1
+ORDER BY Score DESC;
+
+SELECT Score, `Rank`
+FROM (SELECT score,
+             CAST(IF(@prevValue > score, @rowNum := @rowNum + 1, @rowNum) AS UNSIGNED) 'Rank',
+             @prevValue := score
+      FROM Scores,
+           (SELECT @rowNum := 1, @prevValue := 0) s
+      ORDER BY Score DESC) s;
+
+# 1098. Unpopular Books (Medium)
+SELECT b.book_id, b.name
+FROM Orders o
+	     RIGHT JOIN Books b ON o.book_id = b.book_id
+WHERE b.available_from <= DATE_SUB('2019-06-23', INTERVAL 1 MONTH)
+GROUP BY 1
+HAVING SUM(CASE WHEN o.dispatch_date > DATE_SUB('2019-06-23', INTERVAL 1 YEAR) THEN o.quantity ELSE 0 END) < 10;

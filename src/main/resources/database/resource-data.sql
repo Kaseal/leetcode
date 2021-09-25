@@ -114,7 +114,7 @@ insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('2'
 insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('3', '4', '2016/06/09');
 insert into RequestAccepted (requester_id, accepter_id, accept_date) values ('3', '4', '2016/06/10');
 
-# 577. Employee Bonus
+# 577. Employee Bonus (Easy)
 Create table If Not Exists Employee (EmpId int, Name varchar(255), Supervisor int, Salary int);
 Create table If Not Exists Bonus (EmpId int, Bonus int);
 Truncate table Employee;
@@ -126,7 +126,7 @@ Truncate table Bonus;
 insert into Bonus (EmpId, Bonus) values ('2', '500');
 insert into Bonus (EmpId, Bonus) values ('4', '2000');
 
-# 1141. User Activity for the Past 30 Days I
+# 1141. User Activity for the Past 30 Days I (Easy)
 Create table If Not Exists Activity (user_id int, session_id int, activity_date date, activity_type ENUM('open_session', 'end_session', 'scroll_down', 'send_message'));
 Truncate table Activity;
 insert into Activity (user_id, session_id, activity_date, activity_type) values ('1', '1', '2019-07-20', 'open_session');
@@ -141,7 +141,7 @@ insert into Activity (user_id, session_id, activity_date, activity_type) values 
 insert into Activity (user_id, session_id, activity_date, activity_type) values ('4', '3', '2019-06-25', 'open_session');
 insert into Activity (user_id, session_id, activity_date, activity_type) values ('4', '3', '2019-06-25', 'end_session');
 
-# 584. Find Customer Referee
+# 584. Find Customer Referee (Easy)
 CREATE TABLE IF NOT EXISTS customer (id INT,name VARCHAR(25),referee_id INT);
 Truncate table customer;
 insert into customer (id, name, referee_id) values ('1', 'Will', NULL);
@@ -151,7 +151,7 @@ insert into customer (id, name, referee_id) values ('4', 'Bill', NULL);
 insert into customer (id, name, referee_id) values ('5', 'Zack', '1');
 insert into customer (id, name, referee_id) values ('6', 'Mark', '2');
 
-# 1729. Find Followers Count
+# 1729. Find Followers Count (Easy)
 Create table If Not Exists Followers(user_id int, follower_id int);
 Truncate table Followers;
 insert into Followers (user_id, follower_id) values ('0', '1');
@@ -159,7 +159,7 @@ insert into Followers (user_id, follower_id) values ('1', '0');
 insert into Followers (user_id, follower_id) values ('2', '0');
 insert into Followers (user_id, follower_id) values ('2', '1');
 
-# 1484. Group Sold Products By The Date
+# 1484. Group Sold Products By The Date (Easy)
 Create table If Not Exists Activities (sell_date date, product varchar(20));
 Truncate table Activities;
 insert into Activities (sell_date, product) values ('2020-05-30', 'Headphone');
@@ -170,7 +170,7 @@ insert into Activities (sell_date, product) values ('2020-06-01', 'Bible');
 insert into Activities (sell_date, product) values ('2020-06-02', 'Mask');
 insert into Activities (sell_date, product) values ('2020-05-30', 'T-Shirt');
 
-# 1113. Reported Posts
+# 1113. Reported Posts (Easy)
 Create table If Not Exists Actions (user_id int, post_id int, action_date date, action ENUM('view', 'like', 'reaction', 'comment', 'report', 'share'), extra varchar(10));
 Truncate table Actions;
 insert into Actions (user_id, post_id, action_date, action, extra) values ('1', '1', '2019-07-01', 'view', 'None');
@@ -186,3 +186,47 @@ insert into Actions (user_id, post_id, action_date, action, extra) values ('5', 
 insert into Actions (user_id, post_id, action_date, action, extra) values ('5', '2', '2019-07-04', 'report', 'racism');
 insert into Actions (user_id, post_id, action_date, action, extra) values ('5', '5', '2019-07-04', 'view', 'None');
 insert into Actions (user_id, post_id, action_date, action, extra) values ('5', '5', '2019-07-04', 'report', 'racism');
+
+# 574. Winning Candidate (Medium)
+Create table If Not Exists Candidate (id int, Name varchar(255));
+Create table If Not Exists Vote (id int, CandidateId int);
+Truncate table Candidate;
+insert into Candidate (id, Name) values ('1', 'A');
+insert into Candidate (id, Name) values ('2', 'B');
+insert into Candidate (id, Name) values ('3', 'C');
+insert into Candidate (id, Name) values ('4', 'D');
+insert into Candidate (id, Name) values ('5', 'E');
+Truncate table Vote;
+insert into Vote (id, CandidateId) values ('1', '2');
+insert into Vote (id, CandidateId) values ('2', '4');
+insert into Vote (id, CandidateId) values ('3', '3');
+insert into Vote (id, CandidateId) values ('4', '2');
+insert into Vote (id, CandidateId) values ('5', '5');
+
+# 178. Rank Scores (Medium)
+Create table If Not Exists Scores (Id int, Score DECIMAL(3,2));
+Truncate table Scores;
+insert into Scores (Id, Score) values ('1', '3.5');
+insert into Scores (Id, Score) values ('2', '3.65');
+insert into Scores (Id, Score) values ('3', '4.0');
+insert into Scores (Id, Score) values ('4', '3.85');
+insert into Scores (Id, Score) values ('5', '4.0');
+insert into Scores (Id, Score) values ('6', '3.65');
+
+# 1098. Unpopular Books (Medium)
+Create table If Not Exists Books (book_id int, name varchar(50), available_from date);
+Create table If Not Exists Orders (order_id int, book_id int, quantity int, dispatch_date date);
+Truncate table Books;
+insert into Books (book_id, name, available_from) values ('1', 'Kalila And Demna', '2010-01-01');
+insert into Books (book_id, name, available_from) values ('2', '28 Letters', '2012-05-12');
+insert into Books (book_id, name, available_from) values ('3', 'The Hobbit', '2019-06-10');
+insert into Books (book_id, name, available_from) values ('4', '13 Reasons Why', '2019-06-01');
+insert into Books (book_id, name, available_from) values ('5', 'The Hunger Games', '2008-09-21');
+Truncate table Orders;
+insert into Orders (order_id, book_id, quantity, dispatch_date) values ('1', '1', '2', '2018-07-26');
+insert into Orders (order_id, book_id, quantity, dispatch_date) values ('2', '1', '1', '2018-11-05');
+insert into Orders (order_id, book_id, quantity, dispatch_date) values ('3', '3', '8', '2019-06-11');
+insert into Orders (order_id, book_id, quantity, dispatch_date) values ('4', '4', '6', '2019-06-05');
+insert into Orders (order_id, book_id, quantity, dispatch_date) values ('5', '4', '5', '2019-06-20');
+insert into Orders (order_id, book_id, quantity, dispatch_date) values ('6', '5', '9', '2009-02-02');
+insert into Orders (order_id, book_id, quantity, dispatch_date) values ('7', '5', '8', '2010-04-13');
