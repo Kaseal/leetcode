@@ -1,6 +1,6 @@
 package easy.arrays;
 
-import easy.helper_classes.Utils;
+import common.helper_classes.Utils;
 import org.junit.Assert;
 import org.junit.Test;
 

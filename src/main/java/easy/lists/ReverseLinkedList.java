@@ -1,6 +1,6 @@
 package easy.lists;
 
-import easy.helper_classes.ListNode;
+import common.helper_classes.ListNode;
 
 //206. Reverse Linked List (Easy)
 public class ReverseLinkedList {

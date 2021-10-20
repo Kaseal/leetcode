@@ -1,4 +1,4 @@
-package easy.helper_classes;
+package common.helper_classes;
 
 public class Utils {
 

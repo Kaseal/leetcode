@@ -1,6 +1,6 @@
 package easy.trees;
 
-import easy.helper_classes.TreeNode;
+import common.helper_classes.TreeNode;
 
 //100. Same Tree (Easy)
 public class SameTree {

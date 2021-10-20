@@ -1,6 +1,6 @@
 package easy.lists;
 
-import easy.helper_classes.ListNode;
+import common.helper_classes.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

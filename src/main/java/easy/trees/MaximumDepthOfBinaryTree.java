@@ -1,6 +1,6 @@
 package easy.trees;
 
-import easy.helper_classes.TreeNode;
+import common.helper_classes.TreeNode;
 
 //104. Maximum Depth of Binary Tree (Easy)
 public class MaximumDepthOfBinaryTree {

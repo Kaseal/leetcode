@@ -1,6 +1,6 @@
 package easy.lists;
 
-import easy.helper_classes.ListNode;
+import common.helper_classes.ListNode;
 
 //21. Merge Two Sorted Lists (Easy)
 public class MergeTwoSortedLists {

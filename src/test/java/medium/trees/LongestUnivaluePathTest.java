@@ -1,6 +1,6 @@
 package medium.trees;
 
-import easy.helper_classes.TreeNode;
+import common.helper_classes.TreeNode;
 import org.junit.Assert;
 import org.junit.Test;
 

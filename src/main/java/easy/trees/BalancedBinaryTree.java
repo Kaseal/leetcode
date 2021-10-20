@@ -1,6 +1,6 @@
 package easy.trees;
 
-import easy.helper_classes.TreeNode;
+import common.helper_classes.TreeNode;
 
 //110. Balanced Binary Tree (Easy)
 public class BalancedBinaryTree {

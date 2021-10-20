@@ -1,6 +1,6 @@
 package easy.lists;
 
-import easy.helper_classes.ListNode;
+import common.helper_classes.ListNode;
 
 //83. Remove Duplicates from Sorted List (Easy)
 public class RemoveDuplicatesFromSortedList {

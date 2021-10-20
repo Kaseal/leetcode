@@ -1,6 +1,6 @@
 package easy.trees;
 
-import easy.helper_classes.TreeNode;
+import common.helper_classes.TreeNode;
 
 //108. Convert Sorted Array to Binary Search Tree (Easy)
 public class ConvertSortedArrayToBinarySearchTree {

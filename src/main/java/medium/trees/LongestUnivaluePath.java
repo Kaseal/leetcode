@@ -1,6 +1,6 @@
 package medium.trees;
 
-import easy.helper_classes.TreeNode;
+import common.helper_classes.TreeNode;
 
 //687. Longest Univalue Path (Medium)
 public class LongestUnivaluePath {
