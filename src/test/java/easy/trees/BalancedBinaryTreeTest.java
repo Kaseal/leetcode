@@ -37,4 +37,21 @@ public class BalancedBinaryTreeTest {
 		Assert.assertTrue(balancedBinaryTree.isBalanced(null));
 	}
 
+	@Test
+	public void test1_2_2_3_null_null_3_4_null_null_4() {
+		TreeNode treeNode = new TreeNode(1,
+				new TreeNode(2,
+						new TreeNode(3,
+								new TreeNode(4),
+								null),
+						null),
+				new TreeNode(2,
+						null,
+						new TreeNode(3,
+								null,
+								new TreeNode(4))));
+
+		Assert.assertFalse(balancedBinaryTree.isBalanced(treeNode));
+	}
+
 }

@@ -56,4 +56,9 @@ public class SearchInsertPositionTest {
 		Assert.assertEquals(0, searchInsertPosition.searchInsert(nums, 0));
 	}
 
+	@Test
+	public void test1234510_2() {
+		Assert.assertEquals(1, searchInsertPosition.searchInsert(new int[]{1, 2, 3, 4, 5, 10}, 2));
+	}
+
 }
