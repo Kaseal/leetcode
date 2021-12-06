@@ -1,4 +1,4 @@
-package easy;
+package easy.strings;
 
 //680. Valid Palindrome II (Easy)
 public class ValidPalindromeII {

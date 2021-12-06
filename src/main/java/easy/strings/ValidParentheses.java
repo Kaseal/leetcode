@@ -1,4 +1,4 @@
-package easy;
+package easy.strings;
 
 import java.util.Stack;
 

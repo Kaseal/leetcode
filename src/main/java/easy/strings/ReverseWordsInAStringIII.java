@@ -1,4 +1,4 @@
-package easy;
+package easy.strings;
 
 //557. Reverse Words in a String III (Easy)
 public class ReverseWordsInAStringIII {

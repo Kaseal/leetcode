@@ -1,4 +1,4 @@
-package easy;
+package easy.strings;
 
 //14. Longest Common Prefix (Easy)
 public class LongestCommonPrefix {

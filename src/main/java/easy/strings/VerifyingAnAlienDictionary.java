@@ -1,4 +1,4 @@
-package easy;
+package easy.strings;
 
 //953. Verifying an Alien Dictionary (Easy)
 public class VerifyingAnAlienDictionary {

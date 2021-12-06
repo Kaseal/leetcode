@@ -1,4 +1,4 @@
-package easy;
+package easy.strings;
 
 //344. Reverse String (Easy)
 public class ReverseString {

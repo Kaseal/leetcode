@@ -1,4 +1,4 @@
-package easy;
+package easy.strings;
 
 //415. Add Strings (Easy)
 public class AddStrings {

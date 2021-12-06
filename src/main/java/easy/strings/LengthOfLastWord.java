@@ -1,4 +1,4 @@
-package easy;
+package easy.strings;
 
 //58. Length of Last Word (Easy)
 public class LengthOfLastWord {

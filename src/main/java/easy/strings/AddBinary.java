@@ -1,4 +1,4 @@
-package easy;
+package easy.strings;
 
 //67. Add Binary (Easy)
 public class AddBinary {
