@@ -1,7 +1,7 @@
 package easy.arrays;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ThirdMaximumNumberTest {
 
@@ -9,32 +9,32 @@ public class ThirdMaximumNumberTest {
 
 	@Test
 	public void test321() {
-		Assert.assertEquals(1, thirdMaximumNumber.thirdMax(new int[]{3, 2, 1}));
+		Assertions.assertEquals(1, thirdMaximumNumber.thirdMax(new int[]{3, 2, 1}));
 	}
 
 	@Test
 	public void test12() {
-		Assert.assertEquals(2, thirdMaximumNumber.thirdMax(new int[]{1, 2}));
+		Assertions.assertEquals(2, thirdMaximumNumber.thirdMax(new int[]{1, 2}));
 	}
 
 	@Test
 	public void test2231() {
-		Assert.assertEquals(1, thirdMaximumNumber.thirdMax(new int[]{2, 2, 3, 1}));
+		Assertions.assertEquals(1, thirdMaximumNumber.thirdMax(new int[]{2, 2, 3, 1}));
 	}
 
 	@Test
 	public void test112() {
-		Assert.assertEquals(2, thirdMaximumNumber.thirdMax(new int[]{1, 1, 2}));
+		Assertions.assertEquals(2, thirdMaximumNumber.thirdMax(new int[]{1, 1, 2}));
 	}
 
 	@Test
 	public void test122() {
-		Assert.assertEquals(2, thirdMaximumNumber.thirdMax(new int[]{1, 2, 2}));
+		Assertions.assertEquals(2, thirdMaximumNumber.thirdMax(new int[]{1, 2, 2}));
 	}
 
 	@Test
 	public void test122535() {
-		Assert.assertEquals(2, thirdMaximumNumber.thirdMax(new int[]{1, 2, 2, 5, 3, 5}));
+		Assertions.assertEquals(2, thirdMaximumNumber.thirdMax(new int[]{1, 2, 2, 5, 3, 5}));
 	}
 
 }

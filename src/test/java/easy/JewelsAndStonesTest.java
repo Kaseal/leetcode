@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class JewelsAndStonesTest {
 
@@ -9,12 +9,12 @@ public class JewelsAndStonesTest {
 
 	@Test
 	public void test_aA_aAAbbbb() {
-		Assert.assertEquals(3, jewelsAndStones.numJewelsInStones("aA", "aAAbbbb"));
+		Assertions.assertEquals(3, jewelsAndStones.numJewelsInStones("aA", "aAAbbbb"));
 	}
 
 	@Test
 	public void test_z_ZZ() {
-		Assert.assertEquals(0, jewelsAndStones.numJewelsInStones("z", "ZZ"));
+		Assertions.assertEquals(0, jewelsAndStones.numJewelsInStones("z", "ZZ"));
 	}
 
 }

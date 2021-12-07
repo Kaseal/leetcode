@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ public class KidsWithTheGreatestNumberOfCandiesTest {
 		expectedList.add(false);
 		expectedList.add(true);
 
-		Assert.assertEquals(expectedList, kidsWithTheGreatestNumberOfCandies.kidsWithCandies(nums, 3));
+		Assertions.assertEquals(expectedList, kidsWithTheGreatestNumberOfCandies.kidsWithCandies(nums, 3));
 	}
 
 	@Test
@@ -34,7 +34,7 @@ public class KidsWithTheGreatestNumberOfCandiesTest {
 		expectedList.add(false);
 		expectedList.add(false);
 
-		Assert.assertEquals(expectedList, kidsWithTheGreatestNumberOfCandies.kidsWithCandies(nums, 1));
+		Assertions.assertEquals(expectedList, kidsWithTheGreatestNumberOfCandies.kidsWithCandies(nums, 1));
 	}
 
 	@Test
@@ -45,7 +45,7 @@ public class KidsWithTheGreatestNumberOfCandiesTest {
 		expectedList.add(false);
 		expectedList.add(true);
 
-		Assert.assertEquals(expectedList, kidsWithTheGreatestNumberOfCandies.kidsWithCandies(nums, 10));
+		Assertions.assertEquals(expectedList, kidsWithTheGreatestNumberOfCandies.kidsWithCandies(nums, 10));
 	}
 
 }

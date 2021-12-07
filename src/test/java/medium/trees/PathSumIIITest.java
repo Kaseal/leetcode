@@ -1,8 +1,8 @@
 package medium.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class PathSumIIITest {
 
@@ -22,7 +22,7 @@ public class PathSumIIITest {
 						null,
 						new TreeNode(11)));
 
-		Assert.assertEquals(3, pathSumIII.pathSum(treeNode, 8));
+		Assertions.assertEquals(3, pathSumIII.pathSum(treeNode, 8));
 	}
 
 	@Test
@@ -39,14 +39,14 @@ public class PathSumIIITest {
 								new TreeNode(5),
 								new TreeNode(1))));
 
-		Assert.assertEquals(3, pathSumIII.pathSum(treeNode, 22));
+		Assertions.assertEquals(3, pathSumIII.pathSum(treeNode, 22));
 	}
 
 	@Test
 	public void test1__0() {
 		TreeNode treeNode = new TreeNode(1);
 
-		Assert.assertEquals(0, pathSumIII.pathSum(treeNode, 0));
+		Assertions.assertEquals(0, pathSumIII.pathSum(treeNode, 0));
 	}
 
 	@Test
@@ -55,14 +55,14 @@ public class PathSumIIITest {
 				new TreeNode(1),
 				new TreeNode(1));
 
-		Assert.assertEquals(4, pathSumIII.pathSum(treeNode, 1));
+		Assertions.assertEquals(4, pathSumIII.pathSum(treeNode, 1));
 	}
 
 	@Test
 	public void test1__1() {
 		TreeNode treeNode = new TreeNode(1);
 
-		Assert.assertEquals(1, pathSumIII.pathSum(treeNode, 1));
+		Assertions.assertEquals(1, pathSumIII.pathSum(treeNode, 1));
 	}
 
 	@Test
@@ -71,7 +71,7 @@ public class PathSumIIITest {
 				new TreeNode(2),
 				null);
 
-		Assert.assertEquals(1, pathSumIII.pathSum(treeNode, 1));
+		Assertions.assertEquals(1, pathSumIII.pathSum(treeNode, 1));
 	}
 
 	@Test
@@ -80,7 +80,7 @@ public class PathSumIIITest {
 				new TreeNode(1),
 				new TreeNode(1));
 
-		Assert.assertEquals(1, pathSumIII.pathSum(treeNode, 0));
+		Assertions.assertEquals(1, pathSumIII.pathSum(treeNode, 0));
 	}
 
 }

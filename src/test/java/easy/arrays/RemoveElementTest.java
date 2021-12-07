@@ -1,8 +1,8 @@
 package easy.arrays;
 
 import common.helper_classes.Utils;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class RemoveElementTest {
 
@@ -13,8 +13,8 @@ public class RemoveElementTest {
 		int[] nums = {3, 2, 2, 3};
 		int[] expectedNums = {2, 2};
 
-		Assert.assertEquals(2, removeElement.removeElement(nums, 3));
-		Assert.assertTrue(Utils.compareFirstExpectedNumsLengthDigits(expectedNums, nums));
+		Assertions.assertEquals(2, removeElement.removeElement(nums, 3));
+		Assertions.assertTrue(Utils.compareFirstExpectedNumsLengthDigits(expectedNums, nums));
 	}
 
 	@Test
@@ -22,8 +22,8 @@ public class RemoveElementTest {
 		int[] nums = {0, 1, 2, 2, 3, 0, 4, 2};
 		int[] expectedNums = {0, 1, 3, 0, 4};
 
-		Assert.assertEquals(5, removeElement.removeElement(nums, 2));
-		Assert.assertTrue(Utils.compareFirstExpectedNumsLengthDigits(expectedNums, nums));
+		Assertions.assertEquals(5, removeElement.removeElement(nums, 2));
+		Assertions.assertTrue(Utils.compareFirstExpectedNumsLengthDigits(expectedNums, nums));
 	}
 
 }

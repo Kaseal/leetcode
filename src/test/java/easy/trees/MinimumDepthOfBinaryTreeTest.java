@@ -1,8 +1,8 @@
 package easy.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class MinimumDepthOfBinaryTreeTest {
 
@@ -16,7 +16,7 @@ public class MinimumDepthOfBinaryTreeTest {
 						new TreeNode(15),
 						new TreeNode(7)));
 
-		Assert.assertEquals(2, minimumDepthOfBinaryTree.minDepth(treeNode));
+		Assertions.assertEquals(2, minimumDepthOfBinaryTree.minDepth(treeNode));
 	}
 
 	@Test
@@ -31,7 +31,7 @@ public class MinimumDepthOfBinaryTreeTest {
 										null,
 										new TreeNode(6)))));
 
-		Assert.assertEquals(5, minimumDepthOfBinaryTree.minDepth(treeNode));
+		Assertions.assertEquals(5, minimumDepthOfBinaryTree.minDepth(treeNode));
 	}
 
 	@Test
@@ -48,7 +48,7 @@ public class MinimumDepthOfBinaryTreeTest {
 								null),
 						new TreeNode(0)));
 
-		Assert.assertEquals(3, minimumDepthOfBinaryTree.minDepth(treeNode));
+		Assertions.assertEquals(3, minimumDepthOfBinaryTree.minDepth(treeNode));
 	}
 
 }

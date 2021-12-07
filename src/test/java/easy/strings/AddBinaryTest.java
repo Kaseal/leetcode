@@ -1,7 +1,7 @@
 package easy.strings;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class AddBinaryTest {
 
@@ -9,12 +9,12 @@ public class AddBinaryTest {
 
 	@Test
 	public void test11_1() {
-		Assert.assertEquals("100", addBinary.addBinary("11", "1"));
+		Assertions.assertEquals("100", addBinary.addBinary("11", "1"));
 	}
 
 	@Test
 	public void test1010_1011() {
-		Assert.assertEquals("10101", addBinary.addBinary("1010", "1011"));
+		Assertions.assertEquals("10101", addBinary.addBinary("1010", "1011"));
 	}
 
 }

@@ -1,8 +1,8 @@
 package easy.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class BalancedBinaryTreeTest {
 
@@ -16,7 +16,7 @@ public class BalancedBinaryTreeTest {
 						new TreeNode(15),
 						new TreeNode(7)));
 
-		Assert.assertTrue(balancedBinaryTree.isBalanced(treeNode));
+		Assertions.assertTrue(balancedBinaryTree.isBalanced(treeNode));
 	}
 
 	@Test
@@ -29,12 +29,12 @@ public class BalancedBinaryTreeTest {
 						new TreeNode(3)),
 				new TreeNode(2));
 
-		Assert.assertFalse(balancedBinaryTree.isBalanced(treeNode));
+		Assertions.assertFalse(balancedBinaryTree.isBalanced(treeNode));
 	}
 
 	@Test
 	public void test_empty() {
-		Assert.assertTrue(balancedBinaryTree.isBalanced(null));
+		Assertions.assertTrue(balancedBinaryTree.isBalanced(null));
 	}
 
 	@Test
@@ -51,7 +51,7 @@ public class BalancedBinaryTreeTest {
 								null,
 								new TreeNode(4))));
 
-		Assert.assertFalse(balancedBinaryTree.isBalanced(treeNode));
+		Assertions.assertFalse(balancedBinaryTree.isBalanced(treeNode));
 	}
 
 }

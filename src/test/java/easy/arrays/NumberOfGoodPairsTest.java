@@ -1,7 +1,7 @@
 package easy.arrays;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class NumberOfGoodPairsTest {
 
@@ -11,21 +11,21 @@ public class NumberOfGoodPairsTest {
 	public void test123113() {
 		int[] nums = {1, 2, 3, 1, 1, 3};
 
-		Assert.assertEquals(4, numberOfGoodPairs.numIdenticalPairs(nums));
+		Assertions.assertEquals(4, numberOfGoodPairs.numIdenticalPairs(nums));
 	}
 
 	@Test
 	public void test1111() {
 		int[] nums = {1, 1, 1, 1};
 
-		Assert.assertEquals(6, numberOfGoodPairs.numIdenticalPairs(nums));
+		Assertions.assertEquals(6, numberOfGoodPairs.numIdenticalPairs(nums));
 	}
 
 	@Test
 	public void test123() {
 		int[] nums = {1, 2, 3};
 
-		Assert.assertEquals(0, numberOfGoodPairs.numIdenticalPairs(nums));
+		Assertions.assertEquals(0, numberOfGoodPairs.numIdenticalPairs(nums));
 	}
 
 }

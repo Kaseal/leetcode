@@ -1,7 +1,7 @@
 package easy.strings;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ValidParenthesesTest {
 
@@ -9,57 +9,57 @@ public class ValidParenthesesTest {
 
 	@Test
 	public void test1() {
-		Assert.assertTrue(validParentheses.isValid("()"));
+		Assertions.assertTrue(validParentheses.isValid("()"));
 	}
 
 	@Test
 	public void test2() {
-		Assert.assertTrue(validParentheses.isValid("()[]{}"));
+		Assertions.assertTrue(validParentheses.isValid("()[]{}"));
 	}
 
 	@Test
 	public void test3() {
-		Assert.assertFalse(validParentheses.isValid("(]"));
+		Assertions.assertFalse(validParentheses.isValid("(]"));
 	}
 
 	@Test
 	public void test4() {
-		Assert.assertFalse(validParentheses.isValid("([)]"));
+		Assertions.assertFalse(validParentheses.isValid("([)]"));
 	}
 
 	@Test
 	public void test5() {
-		Assert.assertTrue(validParentheses.isValid("{[]}"));
+		Assertions.assertTrue(validParentheses.isValid("{[]}"));
 	}
 
 	@Test
 	public void test6() {
-		Assert.assertFalse(validParentheses.isValid("(){}}{"));
+		Assertions.assertFalse(validParentheses.isValid("(){}}{"));
 	}
 
 	@Test
 	public void test7() {
-		Assert.assertFalse(validParentheses.isValid("({{{{}}}))"));
+		Assertions.assertFalse(validParentheses.isValid("({{{{}}}))"));
 	}
 
 	@Test
 	public void test8() {
-		Assert.assertFalse(validParentheses.isValid("({[)"));
+		Assertions.assertFalse(validParentheses.isValid("({[)"));
 	}
 
 	@Test
 	public void test9() {
-		Assert.assertFalse(validParentheses.isValid("]"));
+		Assertions.assertFalse(validParentheses.isValid("]"));
 	}
 
 	@Test
 	public void test10() {
-		Assert.assertFalse(validParentheses.isValid(")(){}"));
+		Assertions.assertFalse(validParentheses.isValid(")(){}"));
 	}
 
 	@Test
 	public void test11() {
-		Assert.assertFalse(validParentheses.isValid("(])"));
+		Assertions.assertFalse(validParentheses.isValid("(])"));
 	}
 
 }

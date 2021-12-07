@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class PlusOneTest {
 
@@ -12,7 +12,7 @@ public class PlusOneTest {
 		int[] digits = {1, 2, 3};
 		int[] expectedDigits = {1, 2, 4};
 
-		Assert.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
+		Assertions.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
 	}
 
 	@Test
@@ -20,7 +20,7 @@ public class PlusOneTest {
 		int[] digits = {4, 3, 2, 1};
 		int[] expectedDigits = {4, 3, 2, 2};
 
-		Assert.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
+		Assertions.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
 	}
 
 	@Test
@@ -28,7 +28,7 @@ public class PlusOneTest {
 		int[] digits = {0};
 		int[] expectedDigits = {1};
 
-		Assert.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
+		Assertions.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
 	}
 
 	@Test
@@ -36,7 +36,7 @@ public class PlusOneTest {
 		int[] digits = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
 		int[] expectedDigits = {9, 8, 7, 6, 5, 4, 3, 2, 1, 1};
 
-		Assert.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
+		Assertions.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
 	}
 
 	@Test
@@ -44,7 +44,7 @@ public class PlusOneTest {
 		int[] digits = {0, 0};
 		int[] expectedDigits = {0, 1};
 
-		Assert.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
+		Assertions.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
 	}
 
 	@Test
@@ -52,7 +52,7 @@ public class PlusOneTest {
 		int[] digits = {0, 0, 0};
 		int[] expectedDigits = {0, 0, 1};
 
-		Assert.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
+		Assertions.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
 	}
 
 	@Test
@@ -60,7 +60,7 @@ public class PlusOneTest {
 		int[] digits = {9};
 		int[] expectedDigits = {1, 0};
 
-		Assert.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
+		Assertions.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
 	}
 
 	@Test
@@ -68,7 +68,7 @@ public class PlusOneTest {
 		int[] digits = {9, 9};
 		int[] expectedDigits = {1, 0, 0};
 
-		Assert.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
+		Assertions.assertArrayEquals(expectedDigits, plusOne.plusOne(digits));
 	}
 
 }

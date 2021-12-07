@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,14 +15,14 @@ public class MostVisitedSectorInACircularTrackTest {
 		List<Integer> expectedList = new ArrayList<>();
 		expectedList.add(1);
 		expectedList.add(2);
-		Assert.assertEquals(expectedList, instance.mostVisited(4, new int[]{1, 3, 1, 2}));
+		Assertions.assertEquals(expectedList, instance.mostVisited(4, new int[]{1, 3, 1, 2}));
 	}
 
 	@Test
 	public void test212121212_2() {
 		List<Integer> expectedList = new ArrayList<>();
 		expectedList.add(2);
-		Assert.assertEquals(expectedList, instance.mostVisited(2, new int[]{2, 1, 2, 1, 2, 1, 2, 1, 2}));
+		Assertions.assertEquals(expectedList, instance.mostVisited(2, new int[]{2, 1, 2, 1, 2, 1, 2, 1, 2}));
 	}
 
 	@Test
@@ -35,7 +35,7 @@ public class MostVisitedSectorInACircularTrackTest {
 		expectedList.add(5);
 		expectedList.add(6);
 		expectedList.add(7);
-		Assert.assertEquals(expectedList, instance.mostVisited(7, new int[]{1, 3, 5, 7}));
+		Assertions.assertEquals(expectedList, instance.mostVisited(7, new int[]{1, 3, 5, 7}));
 	}
 
 }

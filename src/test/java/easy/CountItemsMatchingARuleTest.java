@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ public class CountItemsMatchingARuleTest {
 		list.add(list2);
 		list.add(list3);
 
-		Assert.assertEquals(1, instance.countMatches(list, "color", "silver"));
+		Assertions.assertEquals(1, instance.countMatches(list, "color", "silver"));
 	}
 
 	@Test
@@ -51,7 +51,7 @@ public class CountItemsMatchingARuleTest {
 		list.add(list2);
 		list.add(list3);
 
-		Assert.assertEquals(2, instance.countMatches(list, "type", "phone"));
+		Assertions.assertEquals(2, instance.countMatches(list, "type", "phone"));
 	}
 
 }

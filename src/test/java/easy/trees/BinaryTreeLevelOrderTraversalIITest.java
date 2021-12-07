@@ -1,8 +1,8 @@
 package easy.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ public class BinaryTreeLevelOrderTraversalIITest {
 		expectedList.add(list2);
 		expectedList.add(list3);
 
-		Assert.assertEquals(expectedList, binaryTreeLevelOrderTraversalII.levelOrderBottom(root));
+		Assertions.assertEquals(expectedList, binaryTreeLevelOrderTraversalII.levelOrderBottom(root));
 	}
 
 	@Test
@@ -43,7 +43,7 @@ public class BinaryTreeLevelOrderTraversalIITest {
 		List<List<Integer>> expectedList = new ArrayList<>();
 		expectedList.add(list1);
 
-		Assert.assertEquals(expectedList, binaryTreeLevelOrderTraversalII.levelOrderBottom(root));
+		Assertions.assertEquals(expectedList, binaryTreeLevelOrderTraversalII.levelOrderBottom(root));
 	}
 
 	@Test
@@ -65,14 +65,14 @@ public class BinaryTreeLevelOrderTraversalIITest {
 		expectedList.add(list2);
 		expectedList.add(list3);
 
-		Assert.assertEquals(expectedList, binaryTreeLevelOrderTraversalII.levelOrderBottom(root));
+		Assertions.assertEquals(expectedList, binaryTreeLevelOrderTraversalII.levelOrderBottom(root));
 	}
 
 	@Test
 	public void testEmpty() {
 		List<List<Integer>> expectedList = new ArrayList<>();
 
-		Assert.assertEquals(expectedList, binaryTreeLevelOrderTraversalII.levelOrderBottom(null));
+		Assertions.assertEquals(expectedList, binaryTreeLevelOrderTraversalII.levelOrderBottom(null));
 	}
 
 }

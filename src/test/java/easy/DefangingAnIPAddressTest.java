@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class DefangingAnIPAddressTest {
 
@@ -9,12 +9,12 @@ public class DefangingAnIPAddressTest {
 
 	@Test
 	public void test1_1_1_1() {
-		Assert.assertEquals("1[.]1[.]1[.]1", defangingAnIPAddress.defangIPaddr("1.1.1.1"));
+		Assertions.assertEquals("1[.]1[.]1[.]1", defangingAnIPAddress.defangIPaddr("1.1.1.1"));
 	}
 
 	@Test
 	public void test255_100_50_0() {
-		Assert.assertEquals("255[.]100[.]50[.]0", defangingAnIPAddress.defangIPaddr("255.100.50.0"));
+		Assertions.assertEquals("255[.]100[.]50[.]0", defangingAnIPAddress.defangIPaddr("255.100.50.0"));
 	}
 
 }

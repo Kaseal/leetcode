@@ -1,8 +1,8 @@
 package easy.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ConvertSortedArrayToBinarySearchTreeTest {
 
@@ -16,7 +16,7 @@ public class ConvertSortedArrayToBinarySearchTreeTest {
 		TreeNode expectedTreeNode = new TreeNode(0, new TreeNode(-10, null, new TreeNode(-3)),
 				new TreeNode(5, null, new TreeNode(9)));
 
-		Assert.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
+		Assertions.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
 	}
 
 	@Test
@@ -25,7 +25,7 @@ public class ConvertSortedArrayToBinarySearchTreeTest {
 
 		TreeNode expectedTreeNode = new TreeNode(-3, null, new TreeNode(0));
 
-		Assert.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
+		Assertions.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
 	}
 
 	@Test
@@ -34,7 +34,7 @@ public class ConvertSortedArrayToBinarySearchTreeTest {
 
 		TreeNode expectedTreeNode = new TreeNode(0);
 
-		Assert.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
+		Assertions.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
 	}
 
 	@Test
@@ -43,7 +43,7 @@ public class ConvertSortedArrayToBinarySearchTreeTest {
 
 		TreeNode expectedTreeNode = new TreeNode(0, new TreeNode(-1), new TreeNode(1, null, new TreeNode(2)));
 
-		Assert.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
+		Assertions.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
 	}
 
 	@Test
@@ -53,7 +53,7 @@ public class ConvertSortedArrayToBinarySearchTreeTest {
 		TreeNode expectedTreeNode = new TreeNode(2, new TreeNode(0, null, new TreeNode(1)),
 				new TreeNode(4, new TreeNode(3), new TreeNode(5)));
 
-		Assert.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
+		Assertions.assertTrue(TreeNode.isSameTree(expectedTreeNode, convertSortedArrayToBinarySearchTree.sortedArrayToBST(nums)));
 	}
 
 }

@@ -1,35 +1,35 @@
 package easy.binary_search;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.extension.Extension;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
-import org.mockito.runners.MockitoJUnitRunner;
 
-@RunWith(MockitoJUnitRunner.class)
-public class FirstBadVersionTest {
+@ExtendWith(FirstBadVersionTest.class)
+public class FirstBadVersionTest implements Extension {
 
 	@Spy
 	private FirstBadVersion firstBadVersion;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
-		MockitoAnnotations.initMocks(this);
+		MockitoAnnotations.openMocks(this);
 	}
 
 	@Test
 	public void test1() {
 		Mockito.doReturn(true).when(firstBadVersion).isBadVersion(4);
-		Assert.assertEquals(4, firstBadVersion.firstBadVersion(5));
+		Assertions.assertEquals(4, firstBadVersion.firstBadVersion(5));
 	}
 
 	@Test
 	public void test2() {
 		Mockito.doReturn(true).when(firstBadVersion).isBadVersion(1);
-		Assert.assertEquals(1, firstBadVersion.firstBadVersion(1));
+		Assertions.assertEquals(1, firstBadVersion.firstBadVersion(1));
 	}
 
 }

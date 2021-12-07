@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CountAndSayTest {
 
@@ -9,22 +9,22 @@ public class CountAndSayTest {
 
 	@Test
 	public void test1() {
-		Assert.assertEquals("1", countAndSay.countAndSay(1));
+		Assertions.assertEquals("1", countAndSay.countAndSay(1));
 	}
 
 	@Test
 	public void test2() {
-		Assert.assertEquals("11", countAndSay.countAndSay(2));
+		Assertions.assertEquals("11", countAndSay.countAndSay(2));
 	}
 
 	@Test
 	public void test3() {
-		Assert.assertEquals("21", countAndSay.countAndSay(3));
+		Assertions.assertEquals("21", countAndSay.countAndSay(3));
 	}
 
 	@Test
 	public void test4() {
-		Assert.assertEquals("1211", countAndSay.countAndSay(4));
+		Assertions.assertEquals("1211", countAndSay.countAndSay(4));
 	}
 
 }

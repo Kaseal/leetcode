@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ClimbingStairsTest {
 
@@ -9,17 +9,17 @@ public class ClimbingStairsTest {
 
 	@Test
 	public void test2() {
-		Assert.assertEquals(2, climbingStairs.climbStairs(2));
+		Assertions.assertEquals(2, climbingStairs.climbStairs(2));
 	}
 
 	@Test
 	public void test3() {
-		Assert.assertEquals(3, climbingStairs.climbStairs(3));
+		Assertions.assertEquals(3, climbingStairs.climbStairs(3));
 	}
 
 	@Test
 	public void test4() {
-		Assert.assertEquals(5, climbingStairs.climbStairs(4));
+		Assertions.assertEquals(5, climbingStairs.climbStairs(4));
 	}
 
 }

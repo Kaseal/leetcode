@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class DestinationCityTest {
 		paths.add(list2);
 		paths.add(list3);
 
-		Assert.assertEquals("Sao Paulo", destinationCity.destCity(paths));
+		Assertions.assertEquals("Sao Paulo", destinationCity.destCity(paths));
 	}
 
 	@Test
@@ -45,7 +45,7 @@ public class DestinationCityTest {
 		paths.add(list2);
 		paths.add(list3);
 
-		Assert.assertEquals("A", destinationCity.destCity(paths));
+		Assertions.assertEquals("A", destinationCity.destCity(paths));
 	}
 
 	@Test
@@ -56,7 +56,7 @@ public class DestinationCityTest {
 		list1.add("Z");
 		paths.add(list1);
 
-		Assert.assertEquals("Z", destinationCity.destCity(paths));
+		Assertions.assertEquals("Z", destinationCity.destCity(paths));
 	}
 
 }

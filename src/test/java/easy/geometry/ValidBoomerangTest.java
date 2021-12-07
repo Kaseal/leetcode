@@ -1,7 +1,7 @@
 package easy.geometry;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ValidBoomerangTest {
 
@@ -9,17 +9,17 @@ public class ValidBoomerangTest {
 
 	@Test
 	public void test11_23_32() {
-		Assert.assertTrue(validBoomerang.isBoomerang(new int[][]{{1, 1}, {2, 3}, {3, 2}}));
+		Assertions.assertTrue(validBoomerang.isBoomerang(new int[][]{{1, 1}, {2, 3}, {3, 2}}));
 	}
 
 	@Test
 	public void test11_22_33() {
-		Assert.assertFalse(validBoomerang.isBoomerang(new int[][]{{1, 1}, {2, 2}, {3, 3}}));
+		Assertions.assertFalse(validBoomerang.isBoomerang(new int[][]{{1, 1}, {2, 2}, {3, 3}}));
 	}
 
 	@Test
 	public void test00_02_21() {
-		Assert.assertTrue(validBoomerang.isBoomerang(new int[][]{{0, 0}, {0, 2}, {2, 1}}));
+		Assertions.assertTrue(validBoomerang.isBoomerang(new int[][]{{0, 0}, {0, 2}, {2, 1}}));
 	}
 
 }

@@ -1,8 +1,8 @@
 package medium.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class LongestUnivaluePathTest {
 
@@ -18,7 +18,7 @@ public class LongestUnivaluePathTest {
 						new TreeNode(5),
 						null));
 
-		Assert.assertEquals(2, longestUnivaluePath.longestUnivaluePath(treeNode));
+		Assertions.assertEquals(2, longestUnivaluePath.longestUnivaluePath(treeNode));
 	}
 
 	@Test
@@ -31,14 +31,14 @@ public class LongestUnivaluePathTest {
 						new TreeNode(5),
 						null));
 
-		Assert.assertEquals(2, longestUnivaluePath.longestUnivaluePath(treeNode));
+		Assertions.assertEquals(2, longestUnivaluePath.longestUnivaluePath(treeNode));
 	}
 
 	@Test
 	public void test1() {
 		TreeNode treeNode = new TreeNode(1);
 
-		Assert.assertEquals(0, longestUnivaluePath.longestUnivaluePath(treeNode));
+		Assertions.assertEquals(0, longestUnivaluePath.longestUnivaluePath(treeNode));
 	}
 
 	@Test
@@ -49,7 +49,7 @@ public class LongestUnivaluePathTest {
 						new TreeNode(2)),
 				new TreeNode(2));
 
-		Assert.assertEquals(2, longestUnivaluePath.longestUnivaluePath(treeNode));
+		Assertions.assertEquals(2, longestUnivaluePath.longestUnivaluePath(treeNode));
 	}
 
 	@Test
@@ -62,12 +62,12 @@ public class LongestUnivaluePathTest {
 						new TreeNode(2),
 						null));
 
-		Assert.assertEquals(2, longestUnivaluePath.longestUnivaluePath(treeNode));
+		Assertions.assertEquals(2, longestUnivaluePath.longestUnivaluePath(treeNode));
 	}
 
 	@Test
 	public void test_empty() {
-		Assert.assertEquals(0, longestUnivaluePath.longestUnivaluePath(null));
+		Assertions.assertEquals(0, longestUnivaluePath.longestUnivaluePath(null));
 	}
 
 	@Test
@@ -82,7 +82,7 @@ public class LongestUnivaluePathTest {
 								new TreeNode(1),
 								null)));
 
-		Assert.assertEquals(4, longestUnivaluePath.longestUnivaluePath(treeNode));
+		Assertions.assertEquals(4, longestUnivaluePath.longestUnivaluePath(treeNode));
 	}
 
 }

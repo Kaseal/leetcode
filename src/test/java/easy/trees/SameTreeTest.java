@@ -1,8 +1,8 @@
 package easy.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class SameTreeTest {
 
@@ -13,7 +13,7 @@ public class SameTreeTest {
 		TreeNode treeNode1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
 		TreeNode treeNode2 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
 
-		Assert.assertTrue(sameTree.isSameTree(treeNode1, treeNode2));
+		Assertions.assertTrue(sameTree.isSameTree(treeNode1, treeNode2));
 	}
 
 	@Test
@@ -21,7 +21,7 @@ public class SameTreeTest {
 		TreeNode treeNode1 = new TreeNode(1, new TreeNode(2), null);
 		TreeNode treeNode2 = new TreeNode(1, null, new TreeNode(2));
 
-		Assert.assertFalse(sameTree.isSameTree(treeNode1, treeNode2));
+		Assertions.assertFalse(sameTree.isSameTree(treeNode1, treeNode2));
 	}
 
 	@Test
@@ -29,12 +29,12 @@ public class SameTreeTest {
 		TreeNode treeNode1 = new TreeNode(1, new TreeNode(2), new TreeNode(1));
 		TreeNode treeNode2 = new TreeNode(1, new TreeNode(1), new TreeNode(2));
 
-		Assert.assertFalse(sameTree.isSameTree(treeNode1, treeNode2));
+		Assertions.assertFalse(sameTree.isSameTree(treeNode1, treeNode2));
 	}
 
 	@Test
 	public void test__null_null() {
-		Assert.assertTrue(sameTree.isSameTree(null, null));
+		Assertions.assertTrue(sameTree.isSameTree(null, null));
 	}
 
 }

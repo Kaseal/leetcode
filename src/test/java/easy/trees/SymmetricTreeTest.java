@@ -1,8 +1,8 @@
 package easy.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class SymmetricTreeTest {
 
@@ -13,7 +13,7 @@ public class SymmetricTreeTest {
 		TreeNode treeNode1 = new TreeNode(1, new TreeNode(2, new TreeNode(3), new TreeNode(4)),
 				new TreeNode(2, new TreeNode(4), new TreeNode(3)));
 
-		Assert.assertTrue(symmetricTree.isSymmetric(treeNode1));
+		Assertions.assertTrue(symmetricTree.isSymmetric(treeNode1));
 	}
 
 	@Test
@@ -21,7 +21,7 @@ public class SymmetricTreeTest {
 		TreeNode treeNode1 = new TreeNode(1, new TreeNode(2, null, new TreeNode(3)),
 				new TreeNode(2, null, new TreeNode(3)));
 
-		Assert.assertFalse(symmetricTree.isSymmetric(treeNode1));
+		Assertions.assertFalse(symmetricTree.isSymmetric(treeNode1));
 	}
 
 	@Test
@@ -29,26 +29,26 @@ public class SymmetricTreeTest {
 		TreeNode treeNode1 = new TreeNode(1, new TreeNode(2, new TreeNode(2), null),
 				new TreeNode(2, new TreeNode(2), null));
 
-		Assert.assertFalse(symmetricTree.isSymmetric(treeNode1));
+		Assertions.assertFalse(symmetricTree.isSymmetric(treeNode1));
 	}
 
 	@Test
 	public void test10() {
 		TreeNode treeNode1 = new TreeNode(1, new TreeNode(0), null);
 
-		Assert.assertFalse(symmetricTree.isSymmetric(treeNode1));
+		Assertions.assertFalse(symmetricTree.isSymmetric(treeNode1));
 	}
 
 	@Test
 	public void test_null() {
-		Assert.assertTrue(symmetricTree.isSymmetric(null));
+		Assertions.assertTrue(symmetricTree.isSymmetric(null));
 	}
 
 	@Test
 	public void test1() {
 		TreeNode treeNode1 = new TreeNode(1);
 
-		Assert.assertTrue(symmetricTree.isSymmetric(treeNode1));
+		Assertions.assertTrue(symmetricTree.isSymmetric(treeNode1));
 	}
 
 	@Test
@@ -57,7 +57,7 @@ public class SymmetricTreeTest {
 				new TreeNode(1, new TreeNode(2), null)), new TreeNode(1,
 				null, new TreeNode(4, new TreeNode(2), null)));
 
-		Assert.assertFalse(symmetricTree.isSymmetric(treeNode1));
+		Assertions.assertFalse(symmetricTree.isSymmetric(treeNode1));
 	}
 
 	@Test
@@ -65,7 +65,7 @@ public class SymmetricTreeTest {
 		TreeNode treeNode1 = new TreeNode(1, new TreeNode(2, null, new TreeNode(3)),
 				new TreeNode(2, new TreeNode(3), null));
 
-		Assert.assertTrue(symmetricTree.isSymmetric(treeNode1));
+		Assertions.assertTrue(symmetricTree.isSymmetric(treeNode1));
 	}
 
 }

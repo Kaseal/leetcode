@@ -1,7 +1,7 @@
 package easy.arrays;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class MergeSortedArrayTest {
 
@@ -14,7 +14,7 @@ public class MergeSortedArrayTest {
 
 		mergeSortedArray.merge(nums1, 3, new int[]{2, 5, 6}, 3);
 
-		Assert.assertArrayEquals(expectedArray, nums1);
+		Assertions.assertArrayEquals(expectedArray, nums1);
 	}
 
 	@Test
@@ -24,7 +24,7 @@ public class MergeSortedArrayTest {
 
 		mergeSortedArray.merge(nums1, 1, new int[]{}, 0);
 
-		Assert.assertArrayEquals(expectedArray, nums1);
+		Assertions.assertArrayEquals(expectedArray, nums1);
 	}
 
 	@Test
@@ -34,7 +34,7 @@ public class MergeSortedArrayTest {
 
 		mergeSortedArray.merge(nums1, 3, new int[]{4, 5, 6}, 3);
 
-		Assert.assertArrayEquals(expectedArray, nums1);
+		Assertions.assertArrayEquals(expectedArray, nums1);
 	}
 
 }

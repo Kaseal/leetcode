@@ -1,7 +1,7 @@
 package easy.arrays;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class RunningSumOf1dArrayTest {
 
@@ -12,7 +12,7 @@ public class RunningSumOf1dArrayTest {
 		int[] nums = {1, 2, 3, 4};
 		int[] expectedNums = {1, 3, 6, 10};
 
-		Assert.assertArrayEquals(expectedNums, runningSumOf1dArray.runningSum(nums));
+		Assertions.assertArrayEquals(expectedNums, runningSumOf1dArray.runningSum(nums));
 	}
 
 	@Test
@@ -20,7 +20,7 @@ public class RunningSumOf1dArrayTest {
 		int[] nums = {1, 1, 1, 1, 1};
 		int[] expectedNums = {1, 2, 3, 4, 5};
 
-		Assert.assertArrayEquals(expectedNums, runningSumOf1dArray.runningSum(nums));
+		Assertions.assertArrayEquals(expectedNums, runningSumOf1dArray.runningSum(nums));
 	}
 
 	@Test
@@ -28,7 +28,7 @@ public class RunningSumOf1dArrayTest {
 		int[] nums = {3, 1, 2, 10, 1};
 		int[] expectedNums = {3, 4, 6, 16, 17};
 
-		Assert.assertArrayEquals(expectedNums, runningSumOf1dArray.runningSum(nums));
+		Assertions.assertArrayEquals(expectedNums, runningSumOf1dArray.runningSum(nums));
 	}
 
 }

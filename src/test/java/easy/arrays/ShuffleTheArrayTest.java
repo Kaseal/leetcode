@@ -1,7 +1,7 @@
 package easy.arrays;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ShuffleTheArrayTest {
 
@@ -12,7 +12,7 @@ public class ShuffleTheArrayTest {
 		int[] nums = {2, 5, 1, 3, 4, 7};
 		int[] expectedNums = {2, 3, 5, 4, 1, 7};
 
-		Assert.assertArrayEquals(expectedNums, shuffleTheArray.shuffle(nums, 3));
+		Assertions.assertArrayEquals(expectedNums, shuffleTheArray.shuffle(nums, 3));
 	}
 
 	@Test
@@ -20,7 +20,7 @@ public class ShuffleTheArrayTest {
 		int[] nums = {1, 2, 3, 4, 4, 3, 2, 1};
 		int[] expectedNums = {1, 4, 2, 3, 3, 2, 4, 1};
 
-		Assert.assertArrayEquals(expectedNums, shuffleTheArray.shuffle(nums, 4));
+		Assertions.assertArrayEquals(expectedNums, shuffleTheArray.shuffle(nums, 4));
 	}
 
 	@Test
@@ -28,7 +28,7 @@ public class ShuffleTheArrayTest {
 		int[] nums = {1, 1, 2, 2};
 		int[] expectedNums = {1, 2, 1, 2};
 
-		Assert.assertArrayEquals(expectedNums, shuffleTheArray.shuffle(nums, 2));
+		Assertions.assertArrayEquals(expectedNums, shuffleTheArray.shuffle(nums, 2));
 	}
 
 }

@@ -1,8 +1,8 @@
 package easy.lists;
 
 import common.helper_classes.ListNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class MergeTwoSortedListsTest {
 
@@ -17,7 +17,7 @@ public class MergeTwoSortedListsTest {
 
 		ListNode resultOfMethodListNode = mergeTwoSortedLists.mergeTwoLists(listNode1, listNode2);
 
-		Assert.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
+		Assertions.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
 	}
 
 	@Test
@@ -28,14 +28,14 @@ public class MergeTwoSortedListsTest {
 
 		ListNode resultOfMethodListNode = mergeTwoSortedLists.mergeTwoLists(listNode1, listNode2);
 
-		Assert.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
+		Assertions.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
 	}
 
 	@Test
 	public void test3() {
 		ListNode resultOfMethodListNode = mergeTwoSortedLists.mergeTwoLists(null, null);
 
-		Assert.assertNull(resultOfMethodListNode);
+		Assertions.assertNull(resultOfMethodListNode);
 	}
 
 	@Test
@@ -46,7 +46,7 @@ public class MergeTwoSortedListsTest {
 
 		ListNode resultOfMethodListNode = mergeTwoSortedLists.mergeTwoLists(listNode1, listNode2);
 
-		Assert.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
+		Assertions.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
 	}
 
 }

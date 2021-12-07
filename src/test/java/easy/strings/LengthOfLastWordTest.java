@@ -1,7 +1,7 @@
 package easy.strings;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class LengthOfLastWordTest {
 
@@ -9,22 +9,22 @@ public class LengthOfLastWordTest {
 
 	@Test
 	public void testHelloWorld() {
-		Assert.assertEquals(5, lengthOfLastWord.lengthOfLastWord("Hello World"));
+		Assertions.assertEquals(5, lengthOfLastWord.lengthOfLastWord("Hello World"));
 	}
 
 	@Test
 	public void testSpace() {
-		Assert.assertEquals(0, lengthOfLastWord.lengthOfLastWord(" "));
+		Assertions.assertEquals(0, lengthOfLastWord.lengthOfLastWord(" "));
 	}
 
 	@Test
 	public void testA() {
-		Assert.assertEquals(1, lengthOfLastWord.lengthOfLastWord("a"));
+		Assertions.assertEquals(1, lengthOfLastWord.lengthOfLastWord("a"));
 	}
 
 	@Test
 	public void testASpace() {
-		Assert.assertEquals(1, lengthOfLastWord.lengthOfLastWord("a "));
+		Assertions.assertEquals(1, lengthOfLastWord.lengthOfLastWord("a "));
 	}
 
 }

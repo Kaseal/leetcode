@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class SubtractTheProductAndSumOfDigitsOfAnIntegerTest {
 
@@ -9,12 +9,12 @@ public class SubtractTheProductAndSumOfDigitsOfAnIntegerTest {
 
 	@Test
 	public void test234() {
-		Assert.assertEquals(15, instance.subtractProductAndSum(234));
+		Assertions.assertEquals(15, instance.subtractProductAndSum(234));
 	}
 
 	@Test
 	public void test4421() {
-		Assert.assertEquals(21, instance.subtractProductAndSum(4421));
+		Assertions.assertEquals(21, instance.subtractProductAndSum(4421));
 	}
 
 }

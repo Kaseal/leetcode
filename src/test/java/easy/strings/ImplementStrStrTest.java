@@ -1,7 +1,7 @@
 package easy.strings;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ImplementStrStrTest {
 
@@ -9,17 +9,17 @@ public class ImplementStrStrTest {
 
 	@Test
 	public void test_hello_ll() {
-		Assert.assertEquals(2, implementStrStr.strStr("hello", "ll"));
+		Assertions.assertEquals(2, implementStrStr.strStr("hello", "ll"));
 	}
 
 	@Test
 	public void test_aaaaa_bba() {
-		Assert.assertEquals(-1, implementStrStr.strStr("aaaaa", "bba"));
+		Assertions.assertEquals(-1, implementStrStr.strStr("aaaaa", "bba"));
 	}
 
 	@Test
 	public void test_empty_empty() {
-		Assert.assertEquals(0, implementStrStr.strStr("", ""));
+		Assertions.assertEquals(0, implementStrStr.strStr("", ""));
 	}
 
 }

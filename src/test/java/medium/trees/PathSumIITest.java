@@ -1,8 +1,8 @@
 package medium.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +30,7 @@ public class PathSumIITest {
 		expectedList.add(Arrays.asList(5, 4, 11, 2));
 		expectedList.add(Arrays.asList(5, 8, 4, 5));
 
-		Assert.assertEquals(expectedList, pathSumII.pathSum(treeNode, 22));
+		Assertions.assertEquals(expectedList, pathSumII.pathSum(treeNode, 22));
 	}
 
 	@Test
@@ -41,7 +41,7 @@ public class PathSumIITest {
 
 		List<List<Integer>> expectedList = new ArrayList<>();
 
-		Assert.assertEquals(expectedList, pathSumII.pathSum(treeNode, 5));
+		Assertions.assertEquals(expectedList, pathSumII.pathSum(treeNode, 5));
 	}
 
 	@Test
@@ -52,7 +52,7 @@ public class PathSumIITest {
 
 		List<List<Integer>> expectedList = new ArrayList<>();
 
-		Assert.assertEquals(expectedList, pathSumII.pathSum(treeNode, 0));
+		Assertions.assertEquals(expectedList, pathSumII.pathSum(treeNode, 0));
 	}
 
 }

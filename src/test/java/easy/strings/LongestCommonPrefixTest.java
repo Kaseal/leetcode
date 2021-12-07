@@ -1,7 +1,7 @@
 package easy.strings;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class LongestCommonPrefixTest {
 
@@ -10,31 +10,31 @@ public class LongestCommonPrefixTest {
 	@Test
 	public void testFlowerFlowFlight() {
 		String[] strs = {"flower", "flow", "flight"};
-		Assert.assertEquals("fl", longestCommonPrefix.longestCommonPrefix(strs));
+		Assertions.assertEquals("fl", longestCommonPrefix.longestCommonPrefix(strs));
 	}
 
 	@Test
 	public void testDogRacecarCar() {
 		String[] strs = {"dog", "racecar", "car"};
-		Assert.assertEquals("", longestCommonPrefix.longestCommonPrefix(strs));
+		Assertions.assertEquals("", longestCommonPrefix.longestCommonPrefix(strs));
 	}
 
 	@Test
 	public void testA() {
 		String[] strs = {"a"};
-		Assert.assertEquals("a", longestCommonPrefix.longestCommonPrefix(strs));
+		Assertions.assertEquals("a", longestCommonPrefix.longestCommonPrefix(strs));
 	}
 
 	@Test
 	public void testFlowerFlowerFlowerFlower() {
 		String[] strs = {"flower","flower","flower","flower"};
-		Assert.assertEquals("flower", longestCommonPrefix.longestCommonPrefix(strs));
+		Assertions.assertEquals("flower", longestCommonPrefix.longestCommonPrefix(strs));
 	}
 
 	@Test
 	public void testAbA() {
 		String[] strs = {"ab", "a"};
-		Assert.assertEquals("a", longestCommonPrefix.longestCommonPrefix(strs));
+		Assertions.assertEquals("a", longestCommonPrefix.longestCommonPrefix(strs));
 	}
 
 }

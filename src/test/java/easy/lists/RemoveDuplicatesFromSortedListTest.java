@@ -1,8 +1,8 @@
 package easy.lists;
 
 import common.helper_classes.ListNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class RemoveDuplicatesFromSortedListTest {
 
@@ -15,7 +15,7 @@ public class RemoveDuplicatesFromSortedListTest {
 
 		ListNode resultOfMethodListNode = removeDuplicatesFromSortedList.deleteDuplicates(listNode1);
 
-		Assert.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
+		Assertions.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
 	}
 
 	@Test
@@ -25,7 +25,7 @@ public class RemoveDuplicatesFromSortedListTest {
 
 		ListNode resultOfMethodListNode = removeDuplicatesFromSortedList.deleteDuplicates(listNode1);
 
-		Assert.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
+		Assertions.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
 	}
 
 	@Test
@@ -35,12 +35,12 @@ public class RemoveDuplicatesFromSortedListTest {
 
 		ListNode resultOfMethodListNode = removeDuplicatesFromSortedList.deleteDuplicates(listNode1);
 
-		Assert.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
+		Assertions.assertTrue(ListNode.compareListNodes(resultListNode, resultOfMethodListNode));
 	}
 
 	@Test
 	public void testEmptyList() {
-		Assert.assertNull(removeDuplicatesFromSortedList.deleteDuplicates(null));
+		Assertions.assertNull(removeDuplicatesFromSortedList.deleteDuplicates(null));
 	}
 
 }

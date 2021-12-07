@@ -1,7 +1,7 @@
 package easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class PalindromeNumberTest {
 
@@ -9,22 +9,22 @@ public class PalindromeNumberTest {
 
 	@Test
 	public void test121() {
-		Assert.assertTrue(palindromeNumber.isPalindrome(121));
+		Assertions.assertTrue(palindromeNumber.isPalindrome(121));
 	}
 
 	@Test
 	public void testMinus121() {
-		Assert.assertFalse(palindromeNumber.isPalindrome(-121));
+		Assertions.assertFalse(palindromeNumber.isPalindrome(-121));
 	}
 
 	@Test
 	public void test10() {
-		Assert.assertFalse(palindromeNumber.isPalindrome(10));
+		Assertions.assertFalse(palindromeNumber.isPalindrome(10));
 	}
 
 	@Test
 	public void testMinus101() {
-		Assert.assertFalse(palindromeNumber.isPalindrome(-101));
+		Assertions.assertFalse(palindromeNumber.isPalindrome(-101));
 	}
 
 }

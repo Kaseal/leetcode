@@ -1,8 +1,8 @@
 package easy.trees;
 
 import common.helper_classes.TreeNode;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class PathSumTest {
 
@@ -22,7 +22,7 @@ public class PathSumTest {
 								null,
 								new TreeNode(1))));
 
-		Assert.assertTrue(pathSum.hasPathSum(treeNode, 22));
+		Assertions.assertTrue(pathSum.hasPathSum(treeNode, 22));
 	}
 
 	@Test
@@ -31,7 +31,7 @@ public class PathSumTest {
 				new TreeNode(2),
 				new TreeNode(3));
 
-		Assert.assertFalse(pathSum.hasPathSum(treeNode, 5));
+		Assertions.assertFalse(pathSum.hasPathSum(treeNode, 5));
 	}
 
 	@Test
@@ -40,7 +40,7 @@ public class PathSumTest {
 				new TreeNode(2),
 				null);
 
-		Assert.assertFalse(pathSum.hasPathSum(treeNode, 0));
+		Assertions.assertFalse(pathSum.hasPathSum(treeNode, 0));
 	}
 
 }
