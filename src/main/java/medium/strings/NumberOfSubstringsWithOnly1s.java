@@ -1,4 +1,4 @@
-package medium;
+package medium.strings;
 
 //1513. Number of Substrings With Only 1s (Medium)
 public class NumberOfSubstringsWithOnly1s {

@@ -1,4 +1,4 @@
-package medium;
+package medium.graphs;
 
 import common.helper_classes.Graph;
 import common.helper_classes.GraphVertex;

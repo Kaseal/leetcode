@@ -1,4 +1,4 @@
-package medium;
+package medium.strings;
 
 import java.util.LinkedList;
 

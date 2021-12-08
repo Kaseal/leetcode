@@ -1,4 +1,4 @@
-package medium;
+package medium.strings;
 
 //439. Ternary Expression Parser (Medium)
 public class TernaryExpressionParser {
