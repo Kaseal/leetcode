@@ -1,5 +1,6 @@
 package easy.arrays;
 
+//@Hard
 //53. Maximum Subarray (Easy)
 public class MaximumSubarray {
 

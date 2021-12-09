@@ -1,5 +1,6 @@
 package easy.strings;
 
+//@Hard
 //67. Add Binary (Easy)
 public class AddBinary {
 
