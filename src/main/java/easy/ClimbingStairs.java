@@ -12,11 +12,4 @@ public class ClimbingStairs {
 		return fibNums[n - 1];
 	}
 
-	public int _climbStairs(int n) {
-		if (n <= 2) {
-			return n;
-		}
-		return _climbStairs(n - 2) + _climbStairs(n - 1);
-	}
-
 }
