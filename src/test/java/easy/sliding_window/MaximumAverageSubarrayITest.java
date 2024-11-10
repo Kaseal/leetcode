@@ -1,4 +1,4 @@
-package easy.arrays;
+package easy.sliding_window;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

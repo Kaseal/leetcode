@@ -1,4 +1,4 @@
-package easy.arrays;
+package easy.sliding_window;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
