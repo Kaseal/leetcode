@@ -1,4 +1,4 @@
-package easy.arrays;
+package easy.hash_map_set;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

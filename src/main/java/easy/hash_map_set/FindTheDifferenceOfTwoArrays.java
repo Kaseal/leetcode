@@ -1,4 +1,4 @@
-package easy.arrays;
+package easy.hash_map_set;
 
 import java.util.ArrayList;
 import java.util.List;
