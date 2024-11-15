@@ -1,4 +1,4 @@
-package easy;
+package easy.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,7 +12,6 @@ public class NumberOfRecentCalls {
 		calls = new LinkedList<>();
 	}
 
-	//1, 100, 3001, 3002
 	public int ping(int t) {
 		calls.add(t);
 
