@@ -1,4 +1,4 @@
-package medium.trees;
+package medium.trees.dfs;
 
 import common.helper_classes.TreeNode;
 import org.junit.jupiter.api.Assertions;
